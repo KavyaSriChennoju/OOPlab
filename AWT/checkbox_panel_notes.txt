@@ -1,0 +1,42 @@
+Class Checkbox
+	A check box is a graphical component that can be in either an "on" (true) or "off" (false) state. Clicking on a check box changes its state from "on" to "off," or from "off" to "on."
+
+Alternatively, several check boxes can be grouped together under the control of a single object, using the CheckboxGroup class. In a check box group, at most one button can be in the "on" state at any given time. Clicking on a check box to turn it on forces any other check box in the same group that is on into the "off" state. 
+
+Checkbox() 
+          Creates a check box with an empty string for its label. 
+
+Checkbox(String label) 
+          Creates a check box with the specified label. 
+
+Checkbox(String label, boolean state) 
+          Creates a check box with the specified label and sets the specified state. 
+
+Checkbox(String label, boolean state, CheckboxGroup group) 
+          Constructs a Checkbox with the specified label, set to the specified state, and in the specified check box group. 
+
+Checkbox(String label, CheckboxGroup group, boolean state) 
+          Creates a check box with the specified label, in the specified check box group, and set to the specified state.
+
+boolean getState() 
+          Determines whether this check box is in the "on" or "off" state. 
+
+void setLabel(String label) 
+          Sets this check box's label to be the string argument. 
+
+ void setState(boolean state) 
+          Sets the state of this check box to the specified state. 
+
+	*****************
+Class Panel 
+	Panel is the simplest container class. A panel provides space in which an application can attach any other component, including other panels. 
+
+The default layout manager for a panel is the FlowLayout layout manager. 
+
+	Constructor Summary 
+Panel() 
+          Creates a new panel using the default layout manager. 
+Panel(LayoutManager layout) 
+          Creates a new panel with the specified layout manager. 
+******************************************************************
+		

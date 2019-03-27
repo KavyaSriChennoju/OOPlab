@@ -1,0 +1,62 @@
+		command line arguments
+		====================
+command line arguments are used to pass the parameters to the main method:
+
+* without command line arguments
+ void main()
+ {
+
+ }
+>saved ->   sample.c
+> compile -> Alt+f9
+     > tcc sample.c
+   running > sample  (without argments)
+ (ctrl + f9)
+________________________    
+	with command line arguments
+void main(int argc,char *argv)
+{
+
+}
+
+argc -> argument count
+argv -> argument vector
+
+saved :   copy.c  ( copy is the file name)
+compile: > tcc copy.c
+run      :  > copy file1 file2 file3 (with arguments)
+	   0      1      2     3
+run : > copy (with out arguments)
+
+copy is the file name
+file1,file2,file3  arguments
+
+argument count is  -> 4 (i.e including file name)
+argv[0] -> copy
+argv[1]-> file1
+argv[2]-> file2
+argv[3]-> file3
+***********************************************************
+java : 
+public class sample
+{
+ public static void main(String args[])
+  {
+         ----
+        --------
+        --------
+  }
+}
+ save: sample.java
+compile : >javac Sample.java
+ Running:
+     1. without arguments 
+	>java Sample
+     2. with arguments 
+	>java Sample file1 file2 file3 
+	       	       0	1    2
+ argument count is  (3) in java, file name will be ignored
+		int count=args.length;
+	args[0] ->file1
+	args[1] -> file2
+	args[2]-> file3

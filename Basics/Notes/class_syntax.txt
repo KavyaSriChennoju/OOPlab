@@ -1,0 +1,51 @@
+class syntax:
+	class class_name
+	{
+
+	}
+
+[modifier] class class_name [ [extends super_class] [implements inteface1,interface2,...]]
+{
+
+
+}
+[ ] - optional
+
+
+class classname
+ {
+
+ }
+public class Class_name
+{
+
+
+}
+class Class_Name extends SuperClass_name
+{
+
+
+}
+class Class_name implements interface1,interface2,...
+{
+
+
+}
+public class Class_Name extends SuperClass_name implements interface1,interface2,...
+{
+
+
+}
+modifiers/
+	direct : public,private,protected. (access specifiers)
+	in-direct: static,final, abstract
+	***************
+c		c++		java
+--------------------------------------------------------------
+variable           data members	                fields
+funtions	      member function	     	 methods
+-NA-	       parent/base class      parent/base/ super 
+-NA-	    derived/child class      derived/child/  sub 
+----------------------------------------------------------------------------
+
+

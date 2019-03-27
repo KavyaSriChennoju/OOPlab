@@ -1,0 +1,29 @@
+	The package statement 
+	
+	The name package implies a collection of classes, somewhat like a library. In use a package is also a little like a directory. If you place a package statement in a file it will only be visible to other classes in the same package. You can place a comment before the package statement but nothing else.
+
+If a source file has a package statement it must become before any other statement apart from comments .
+
+Remember that if you do not place a package statement in a source file it will be considered to have a default package which corresponds to the current directory.
+syntax:
+	package packagename;
+	package packagename.subpackagename;
+
+Java has two packages:
+	java
+	javax
+	*********************
+ The import statement  
+	  Import statements must come after any package statements and before any code. Import statements cannot come within classes, after classes are declared or anywhere else. 
+
+The import statement allows you to use a class directly instead of fully qualifying it with the full package name. an example of this is that the classname java.awt.Button is normally referred to simply as Button, so long as you have put in the statement at the top of the file as follows
+import java.awt.*;
+
+Note that using a import statement does not result in a performance overhead or a change in the size of the .class output file.
+
+syntax:
+ import package_name.*;
+ import package_name.class_name;
+ 
+ import package.subpackage.*;
+ import package.subpakage.classname;

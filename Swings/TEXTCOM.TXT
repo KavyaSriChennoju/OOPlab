@@ -1,0 +1,18 @@
+JTextComponent is the base class for swing text components. It tries to be compatible with the java.awt.TextComponent class where it can reasonably do so.
+
+JEditorPane:
+ A text component to edit various kinds of content. 
+
+JTextPane:
+A text component that can be marked up with attributes that are represented graphically. 
+
+This component models paragraphs that are composed of runs of character level attributes. Each paragraph may have a logical style attached to it which contains the default attributes to use if not overridden by attributes set on the paragraph or character run. Components and images may be embedded in the flow of text. 
+
+A JTextArea is a multi-line area that displays plain text. It is intended to be a lightweight component that provides source compatibility with the java.awt.TextArea class where it can reasonably do so.
+
+
+JTextField is a lightweight component that allows the editing of a single line of text.
+
+JPasswordField is a lightweight component that allows the editing of a single line of text where the view indicates something was typed, but does not show the original characters.
+
+JFormattedTextField extends JTextField adding support for formatting arbitrary values, as well as retrieving a particular object once the user has edited the text.

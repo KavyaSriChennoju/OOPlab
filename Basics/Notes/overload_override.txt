@@ -1,0 +1,61 @@
+Separators
+	Some separators are used to group code fragments, and others are used to distinguish between fragments. The following  characters are the separators:
+separators		Description
+{ } 		arrays, block of statements.
+( )		methods, loops.
+ [ ]		arrays.
+ ;		statement terminator,loops
+ ,		variable declarations,loops,arguments.
+			int i,j,k;
+			for(i=0,j=0;i<=5;i++)
+			public void add(int a,int b,int c)
+ .		objects
+__________________________________________________
+Overloading of methods:
+	Overloading of methods is a compiler trick to allow you to use the same name to perform different actions depending on parameters. 
+	
+	This is the heart of overloading methods, part of what is known as polymorphism.
+
+poly-morphism.
+	
+	There are no keywords to remember to overload methods, you just create multiple methods with the same name but different numbers and or types. The names of the parameters are not important but the number and types must be different.	
+	void show();
+	void show(int x);
+	void show(int x,float y);
+	void show(float f,int x);
+	
+	int show();  //illegal
+	void show(int y); //illegal  show(200);
+	int show(int y); //illegal
+
+Note: Overloaded methods are differentiated only on the number, type and order of parameters,not on the return type of the method.
+	               *****************************
+		Overriding of methods 
+Overriding a method means that its entire functionality is being replaced. Overriding is something done in a child class to a method defined in a parent class.
+
+To override a method a new method is defined in the child class with exactly the same signature as the one in the parent class.
+
+ class Student
+ {
+  void search(int sid)
+  {
+   }
+  void search(int id,String name) //overloading
+  {
+  }
+}
+  class Employee extends Student
+  {
+  void search(int eid)  //overriding
+  {
+   }
+	void display()
+	{
+	}
+  }
+  ********************************************
+  Student ca=new Student();
+  ca.show(78);
+  
+  Employee emp=new Employee();
+  	emp.show(300);

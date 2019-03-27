@@ -1,0 +1,51 @@
+Everything is an object. Think of an object as a fancy variable; it stores data, but you can
+also ask it to perform operations on itself by making requests. In theory, you can take any
+conceptual component in the problem you’re trying to solve (dogs, buildings, services, etc.)
+and represent it as an object in your program.
+-	--	-	-
+Java vs. C++?
+Java looks a lot like C++, and so naturally it would seem that C++ will be replaced by Java. For one thing, C++ still has some features that
+Java doesn’t, and although there have been a lot of promises about Java someday being as
+fast or faster than C++ the breakthroughs haven’t happened yet (it’s getting steadily faster,
+but still hasn’t touched C++). Also, there seems to be a perking interest in C++ in many
+fields, so I don’t think that language is going away any time soon. (Languages seem to hang
+around. Speaking at one of my “Intermediate/Advanced Java Seminars,” Allen Holub
+asserted that the two most commonly-used languages are Rexx and COBOL, in that order.)
+I’m beginning to think that the strength of Java lies in a slightly different arena than that of
+C++. C++ is a language that doesn’t try to fit a mold. Certainly it has been adapted in a
+number of ways to solve particular problems, especially with tools like Microsoft Visual
+C++ and Borland C++ Builder (a particular favorite of mine). These combine libraries,
+component models and code generation tools to solve the problem of developing windowed
+end-user applications (for Microsoft Windows). And yet, what do the vast majority of
+Windows developers use? Microsoft’s Visual Basic (VB). This despite the fact that VB
+produces the kind of code that becomes unmanageable when the program is only a few
+pages long (and syntax that can be positively mystifying). As successful and popular as VB
+is, from a language design viewpoint it’s a mountain of hacks. It would be nice to have the
+ease and power of VB without the resulting unmanageable code. And that’s where I think
+Java will shine: as the “next VB.” You may or may not shudder to hear this, but think about
+it: so much of Java is designed to make it easy for the programmer to solve application-level
+problems like networking and cross-platform UI, and yet it has a language design intended
+to allow the creation of very large and flexible bodies of code. Add to this the fact that Java
+has the most robust type checking and error-handling systems I’ve ever seen in a language
+and you have the makings of a significant leap forward in programming productivity.
+Should you use Java instead of C++ for your project? Other than Web applets, there are two
+issues to consider. First, if you want to use a lot of existing libraries (and you’ll certainly get
+a lot of productivity gains there), or if you have an existing C or C++ code base, Java might
+slow your development down rather than speeding it up. If you’re developing all your code
+primarily from scratch, then the simplicity of Java over C++ will shorten your development
+time.
+The biggest issue is speed. Interpreted Java has been slow, even 20 to 50 times slower than C
+in the original Java interpreters. This has improved quite a bit over time, but it will still
+remain an important number. Computers are about speed; if it wasn’t significantly faster to
+do something on a computer then you’d do it by hand. (I’ve even heard it suggested that you
+start with Java, to gain the short development time, then use a tool and support libraries to
+translate your code to C++, if you need faster execution speed.)
+The key to making Java feasible for most non-Web development projects is the appearance of
+speed improvements like so-called “just-in time” (JIT) compilers and possibly even native
+code compilers (two of which exist at this writing). Of course, native-code compilers will
+eliminate the touted cross-platform execution of the compiled programs, but they will also
+bring the speed of the executable closer to that of C and C++. And cross compiling programs
+in Java should be a lot easier than doing so in C or C++. (In theory, you just recompile, but
+that promise has been made before for other languages.)
+You can find comparisons of Java and C++, observations about Java realities and
+practicality and coding guidelines in the appendices.

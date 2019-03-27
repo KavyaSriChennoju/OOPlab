@@ -1,0 +1,9 @@
+Varargs:
+	In past releases, a method that took an arbitrary number of values required you to create an array and put the values into the array prior to invoking the method.
+
+It is still true that multiple arguments must be passed in an array, but the varargs feature automates and hides the process.
+
+public static String format(String pattern,Object... arguments);
+
+The three periods after the final parameter's type indicate that the final argument may be passed as an array or as a sequence of arguments. Varargs can be used only in the final argument position.
+

@@ -1,0 +1,86 @@
+		Standard JDK Tools and Utilities
+
+Basic Tools (javac, java, javadoc, apt, appletviewer, jar, jdb, javah, javap, extcheck) 
+
+Security Tools (keytool, jarsigner, policytool, kinit, klist, ktab) 
+
+Internationalization Tools (native2ascii) 
+
+Remote Method Invocation (RMI) Tools (rmic, rmiregistry, rmid, serialver)
+********************************************************
+
++The Direcotry and File Structure. (jdk1.7.0)
+d:\jdk1.7.0 (java's Home Directory)
+	d:\java7, D:\jdk1.7
+ d:\jdk1.7
+	|
+	|_____/lib
+	|____/jre
+	|____/include
+	|____/db
+ 	|_____/demo
+	|____src.zip
+	|____/bin
+	        |_____javac.exe
+	        |_____java.exe
+	        |_____javap.exe
+basic tools        |_____javadoc.exe
+                         |_____jar.exe
+	        |_____javah.exe	  	  	   	        	        |_____jdb.exe 	
+	        |_____appletviewer.exe
+
+d:\j2sdk1.4.0\lib 
+	Files used by the development tools. These include tools.jar, which contains non-core classes for support of the tools and utilities in the SDK. 
+
+d:\j2sdk1.4.0\jre 
+	The root directory of the Java runtime environment used by the SDK development tools. The runtime environment is an implementation of the Java 2 platform. 
+
+d:\j2sdk1.4.0\src.jar 
+Archive containing source code for the Java 2 platform. 
+
+d:\j2sdk1.4.0\demo 
+	Examples, with source code, that show you how to program for the Java platform. 
+
+d:\j2sdk1.4.0\include 
+	C-language header files that support native-code programming using the Java Native Interface(JNI) and the Java Virtual Machine Debugger Interface. 
+
+d:\j2sdk1.4.0\bin 
+	The executable files for the development tools contained in the Java Development Kit. The PATH environment variable should contain an entry for this directory.
+
+
+	(Basic Tools)
+
+javac: 	
+The compiler for the Java programming language. 
+   (java source code - to -Byte code).
+	.java   -> .class
+java 
+    	 The launcher for Java applications. 
+
+jar 	
+ Manage Java Archive (JAR) files. (java Executable file .jar)
+
+jdb	 The Java Debugger. 
+
+javah:
+	C header and stub generator. Used to  write native methods. (JNI ->java Native interface)
+
+javap: 
+Class file disassembler(displays source to the given .class file )
+
+appletviewer:
+	 Run and debug applets without a web browser.
+
+javadoc:  You can use it to generate the API (Application Programming Interface) documentation or the implementation documentation for a set of source files.
+
+The JavadocTM tool parses the declarations and documentation 	comments in a set of Java source files and produces a corresponding 	set of HTML pages describing (by default) the public and protected 	classes, nested classes (but not anonymous inner classes), interfaces, 	constructors, methods, and fields. 
+ ****************************************************
+          source code			Sample.java
+             |
+	     |         javac(Complier)
+	   Byte code			Sample.class 	
+              |
+	      |   	java(interpreter)
+     windows/unix/linux,sun
+
+jre: java runtime environment

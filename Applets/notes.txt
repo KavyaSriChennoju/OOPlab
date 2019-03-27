@@ -1,0 +1,33 @@
+Java applets:
+	A Java applet is a compiled Java program, composed of classes just like any Java program. While a simple applet may consist of only a single class, most large applets should be broken into many classes.
+
+Applets are autonomous programs, but they are confined within the walls of a web browser or applet viewer, and have to play by its rules.
+
+{
+An applet is more like an embeddable program module. The Java interpreter can't run an applet directly, because it is used as part of a larger application. To run an applet, you can use a web browser like Sun's HotJava or Netscape Navigator, or the appletviewer tool that comes with the SDK.
+
+Both HotJava and appletviewer are standalone Java applications run directly by the Java interpreter; these programs implement the additional structure needed to run Java applets.
+
+The applet ran with security restrictions that prevented the applet from doing questionable things like reading from or writing to the disk or contacting arbitrary computers on the network.
+}
+
+Developing an applet
+	1. import the neccessary packages
+		java.applet.*;
+		javax.swing.*;
+	2. create a class by extending Applet class (for AWT) /JApplet class (for Swings).
+	3. save the file .java extension.
+	4. compile the .java file by using the javac.exe
+	5. create a html file by using the 
+		<APPLET> tag
+	6. save the HTML file either in .html or in .htm
+	7. execute the .html/.htm file in the web-browser/ appletviewer.
+	
+java applet 		java application
+--------------------------------------------
+1. small programme		1. any large progra
+2. used in web pages	2. any standard alone
+3. no main()		3. main()
+4. no constructor,		4. constructor 
+	init()
+5.viewed in web-browser/appletviewer 5. viewed 			console/windows	

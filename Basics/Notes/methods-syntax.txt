@@ -1,0 +1,149 @@
+1) Declaration: (optional)
+	void print();
+2)  Definition:
+	void print()
+ 	{
+
+	}
+3)   calling:
+	[object/classname.]methodName()
+
+methodName();  		print();
+Object.methodName()	obj.print();
+ClassName.methodName()	Employee.print();
+==============================================
+print();
+object.print();
+className.print();
+============================
+class Student
+{
+   public static void print()   //class method (static)
+   {
+
+    }
+
+     public void display()	//instance method (non-static)
+       {
+	print();
+         }
+}
+ 
+class Method calling:		
+		Student.print();
+		Student -> Class Name
+instance method calling:
+		Student st=new Student();
+		st -> object/instance
+		st.display();
+=======================================
+  syntax:
+[modifiers] return_type/void method_name([arguments])
+{
+     --------
+     ---------
+        [return value/variable;]
+}
+
+[private| public| protected] [static| final | abstract | strictfp|native|synchronized] return_type/void method_name([arguments])
+{
+   statements1;
+   statement2;
+   [return value/variable;]
+}
+*************************************************************
+ example:
+  1)
+ public void show() -> method defination
+   {
+   
+   }	
+  calling:  
+	 [object.]show();
+ 2)public int square(int n)
+   {
+	int x=n*n;
+	return x; 
+    }
+      calling:
+	int st=[object.]square(20);
+
+      --------------------The End------------------
+ 	array as prameter in constructors/methods
+1)  public void setNumbers(int x[])
+   {
+
+
+   }
+
+and a method is returning array type
+
+2)public int[] getNumbers()
+            {
+	  int x[]={34,56,78,688};
+	return x;
+           }	
+ int no[]=getNumbers();
+****************************************
+
+ methods are 2  types in Java.
+Getter & Setter methods
+	  
+	1. getter /accessors
+	2. setter/mutators	
+____________________________
+   int x=9000;
+         printf(x);  //getting/reading
+  x=6899; //setting /writinng
+_________________________________
+		
+getter methods are used to get(read) the value of a variable.
+(accessor)
+syntax of getter method:
+	    [modifier] retrun_type getXxx()
+	    {
+	               return variable;
+	     }
+	private int number=900;
+
+	public int getNumber()
+	{
+	    return number;
+	}
+	calling:
+	      int x=getNumber();
+==================================================
+setter methods are used to change(Writing) the value of the variable.
+(mutators)
+         2.setter methods
+                Syntax:
+	[modifier] void setXxx(argument)
+	{
+
+	}	
+           Example:
+	public void setNumber(int x)
+	{
+	  number=x;
+	}
+	Calling:
+		setNumber(7500);
+   ========================================
+	boolean isGreater(int no)
+	{
+	   if(no >500)
+                      return true;
+	  else
+	     return false;
+	}
+	boolean b=isGreater(800);      
+
+*****************************************
+•Instance methods can access instance variables and instance methods directly. 
+
+•Instance methods can access class variables and class methods directly. 
+
+•Class methods can access class variables and class methods directly. 
+
+•Class methods cannot access instance variables or instance methods directly—they must use an object reference.
+                           

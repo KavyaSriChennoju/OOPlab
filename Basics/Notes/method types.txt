@@ -1,0 +1,38 @@
+1. A method without return type & without arguments
+	e.g:
+	      public void print() 
+                      {
+	         System.out.println("Number is..1000");
+	      }
+	Calling: 	 print() ;   (or) obj.print() (or) ClassName.print();
+--------------------------------------------------------------------------------
+2. A method without return type & with arguments	 
+	e.g:
+	        public void print(int sno) 
+                         {
+		System.out.println("Number is.."+sno);
+	           }
+	Calling:
+		print(500);  (or)	obj.print(500);
+		print(3400);  (or) 	obj.print(3400);
+--------------------------------------------------------------------------------
+3. A method with return type & without arguments
+                public int getNumber()
+                  {
+		int sno=500;
+                      return sno;  (or) return 500;
+                   }
+	Calling:
+		int tno=getNumber();
+		int tno=obj.getNumber();
+---------------------------------------------------------------------------------
+4. A method with return type & with arguments
+	
+                public int square(int no)
+                 {
+	      int res=no*no;
+	      return res;   	
+	 }
+	Calling:
+		int tno=square(5);
+		int tno=obj.square(25);

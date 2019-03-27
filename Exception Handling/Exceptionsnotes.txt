@@ -1,0 +1,154 @@
+		Exception Handling	
+		
+	    Errors are 2 Types:
+	    	1. compile time errors
+	    	2. run time errors
+1.  compile-time Errors
+	will occur during the program compilation.
+	any syntactical mistakes
+	i.e   ; -> :    
+		"->  '
+		(-> )	 
+ 2. Run-time Errors
+	during the program execution.
+	logical mistakes. 	
+		i.e dividing a number by zero -> 10/0
+***********************************************************        
+ Exception:
+	Exception is an event that occures during the execution of a program. If any statement is having a run-time error the JVM or the throw statment throws an object, that thrown object contains the information like exception name, type, message etc. catching or handling the thrown object is known as exception handling in java.
+
+To handle exception, java provides 5 key words
+	    try,catch,throw,throws & finally
+ 	******************
+ -> try block must follow catch / finally block.
+ -> try block may contain another try-catch block
+ -> a catch block may contain another try-catch block.
+1) try
+    {
+        statement1;
+        statement2;
+        statement3;
+    }
+    catch(expclass obj1)
+    {
+        statement1;
+        statement2;     
+    }
+    Description: if Any statement is having a run-time error in try block, then the JVM/throw statement throws an object, that thrown object must be matched with the catch block object, then executes the catch block statements.
+      
+2) try
+    {
+        statement1;
+        statement2;
+        statement3;
+    } 
+     catch(expclass1 obj1)
+    {
+        statement1;
+        statement2;     
+   }
+    catch(expclass2 obj2)
+    {
+        statement1;
+        statement2;     
+   }
+
+3)  try
+    {
+        statement1;
+        statement2;
+        statement3;
+    }
+    finally
+    {
+      statements
+    }
+Description:
+	the finally block will execute in both situations, like if there is error/ if there is no-error.
+
+4)  try
+    {
+        statement1;
+        statement2;
+        statement3;
+    }
+    catch(expclass2 obj2)
+    {
+        statement1;
+        statement2;     
+   }finally
+    {
+      statements
+    }
+Naviagtion:
+    1. If there is a Error: try -> catch -> finally
+     2. if there is no-error: try -> finally 
+--------------------------------------------
+try
+{
+   try{ 
+        }
+        catch(expt obj) 
+        { }
+
+}catch(exp obj)
+{
+
+}
+****************************************************
+		Throwable class
+	The Throwable class is the superclass of all errors and exceptions in the Java language. Only objects that are instances of this class (or one of its subclasses) are thrown by the Java Virtual Machine or can be thrown by the Java throw statement. Similarly, only this class or one of its subclasses can be the argument type in a catch clause. 
+******************************************
+public class ArithmeticException
+
+	Thrown when an exceptional arithmetic condition has occurred. For example, an integer "divide by zero" throws an instance of this class.
+****************************************************************************
+ArrayStoreException:
+	Thrown to indicate that an attempt has been made to store the wrong type of object into an array of objects. For example, the following code generates an ArrayStoreException: 
+	
+	     Object x[] = new String[3];
+	     x[0] = new Integer(0);
+*****************************************************
+Class ArrayIndexOutOfBoundsException
+
+	Thrown to indicate that an array has been accessed with an illegal index. The index is either negative or greater than or equal to the size of the array.
+******************************************
+If you try to create an array where the length is negative, the run-time
+NegativeArraySizeException will be thrown.
+**************************************
+ClassNotFoundException:
+	Thrown when an application tries to load in a class through its string name using: 
+
+->The forName method in class Class. 
+	Class.forName("com.bdps.ArrayException");
+	
+->The loadClass method in class ClassLoader. 
+
+*************************************
+NullPointerException:
+	Thrown when an application attempts to use null in a case where an object is required. 
+	
+	 1. TestDemo td;
+	     td=new TestDemo(); //legal
+		td.show();
+
+	 2. TestDemo td;
+	 	   td.show();	       
+Calling the instance method of a null object. 
+Accessing or modifying the field of a null object. 
+		td.sno=9000;
+Taking the length of null as if it were an array. 
+	int values[];
+		values.length;
+**********************************
+NumberFormatException:
+	Thrown to indicate that the application has attempted to convert a string to one of the numeric types, but that the string does not have the appropriate format. 
+
+int i=Integer.parseInt("144"); //ok
+//generates NumberFormatException
+	 int i=Integer.parseInt("abc"); 
+*************************************
+public static void main(String args[])throws Exception
+{
+
+}

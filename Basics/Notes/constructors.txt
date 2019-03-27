@@ -1,0 +1,73 @@
+It can be tedious to initialize all of the variables in a class each time an instance is created.
+
+Constructors are an important part of all classes and have many significant attributes. Most real-world classes explicitly define their own constructors within their class definition. 
+
+A constructor initializes an object immediately upon creation. It has the same name as the class in which it resides and is syntactically similar to a method. Once defined, the constructor is automatically called immediately after the object is created, before the new operator completes.
+
+Most constructors will not display anything. They will simply initialize an object.
+
+Overloading Constructors
+	In addition to overloading normal methods, you can also overload constructor methods.
+
+One of the most common uses of object parameters involves constructors. Frequently, you will want to construct a new object so that it is initially the same as some existing object. To do this, you must define a constructor that takes an object of its class as a parameter. For example,
+the following version of Box allows one object to initialize another:
+// Here, Box allows one object to initialize another.
+class Box {
+double width;
+double height;
+double depth;
+// Notice this constructor. It takes an object of type Box.
+Box(Box ob) { // pass object to constructor
+width = ob.width;
+height = ob.height;
+depth = ob.depth;
+}
+// constructor used when all dimensions specified
+Box(double w, double h, double d) {
+width = w;
+height = h;
+depth = d;
+}
+// constructor used when no dimensions specified
+Box() {
+width = -1; // use -1 to indicate
+height = -1; // an uninitialized
+depth = -1; // box
+}
+// constructor used when cube is created
+Box(double len) {
+width = height = depth = len;
+}
+
+
+
+
+However, if no explicit constructor is specified, then Java will automatically supply a default constructor.
+
+
+***************************************************
+Using super:
+super has two general forms. The first calls the superclass’ constructor. The second is used to access a member of the superclass that has been hidden by a member of a subclass.
+
+
+Using super to Call Superclass Constructors
+	A subclass can call a constructor defined by its superclass by use of the following form of super:
+
+super(arg-list);
+
+Here, arg-list specifies any arguments needed by the constructor in the superclass. super( ) must always be the first statement executed inside a subclass’ constructor.
+
+
+A Second Use for super
+The second form of super acts somewhat like this, except that it always refers to the superclass of the subclass in which it is used. This usage has the following general form:
+
+super.member
+
+Here, member can be either a method or an instance variable.
+This second form of super is most applicable to situations in which member names of a subclass hide members by the same name in the superclass. Consider this simple class
+
+hierarchy:
+// Using super to overcome name hiding.
+class A {
+int i;
+}

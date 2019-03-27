@@ -1,0 +1,21 @@
+Class BufferedReader:
+
+	Reads text from a character-input stream, buffering characters so as to provide for the efficient reading of characters, arrays, and lines.
+
+	The buffer size may be specified, or the default size may be used. The default is large enough for most purposes.
+
+
+Constructor Summary
+	BufferedReader(Reader in) 
+	BufferedReader(Reader in, int sz) 
+
+Method Summary:
+	public String readLine()throws IOException
+	
+	Reads a line of text. A line is considered to be terminated by any one of a line feed ('\n'), a carriage return ('\r'), or a carriage return followed immediately by a linefeed.
+============================================
+Class LineNumberReader"
+
+	A buffered character-input stream that keeps track of line numbers. This class defines methods setLineNumber(int) and getLineNumber() for setting and getting the current line number respectively.
+
+By default, line numbering begins at 0.

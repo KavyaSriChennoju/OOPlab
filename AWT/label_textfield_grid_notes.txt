@@ -1,0 +1,83 @@
+Class Label
+	A Label object is a component for placing text in a container. A label displays a single line of read-only text. The text can be changed by the application, but a user cannot edit it directly. 
+
+Constructor Summary 
+Label() 
+          Constructs an empty label. 
+Label(String text) 
+          Constructs a new label with the specified string of text, left justified. 
+Label(String text, int alignment) 
+          Constructs a new label that presents the specified string of text with the specified alignment. 
+		  
+
+Methods
+
+ int getAlignment() 
+          Gets the current alignment of this label. 
+ String getText() 
+          Gets the text of this label. 
+
+void setAlignment(int alignment) 
+          Sets the alignment for this label to the specified alignment. 
+ void setText(String text) 
+          Sets the text for this label to the specified text. 
+____________________________________________
+
+Class TextField.
+	A TextField object is a text component that allows for the editing of a single line of text. 
+
+Constructor Summary 
+TextField() 
+          Constructs a new text field. 
+TextField(int columns) 
+          Constructs a new empty text field with the specified number of columns. 
+TextField(String text) 
+          Constructs a new text field initialized with the specified text. 
+TextField(String text, int columns) 
+          Constructs a new text field initialized with the specified text to be displayed, and wide enough to hold the specified number of columns. 
+
+
+methods
+int getColumns() 
+          Gets the number of columns in this text field. 
+ char getEchoChar() 
+          Gets the character that is to be used for echoing. 
+ void setColumns(int columns) 
+          Sets the number of columns in this text field. 
+ void setEchoChar(char c) 
+          Sets the echo character for this text field. 
+void setText(String t) 
+          Sets the text that is presented by this text component to be the specified text. 
+_______________________________
+Class GridLayout
+	The GridLayout class is a layout manager that lays out a container's components in a rectangular grid. The container is divided into equal-sized rectangles, and one component is placed in each rectangle.
+
+Constructor Summary 
+GridLayout() 
+          Creates a grid layout with a default of one column per component, in a single row. 
+GridLayout(int rows, int cols) 
+          Creates a grid layout with the specified number of rows and columns. 
+GridLayout(int rows, int cols, int hgap, int vgap) 
+          Creates a grid layout with the specified number of rows and columns. 
+	
+methods
+
+int getColumns() 
+          Gets the number of columns in this layout. 
+ int getHgap() 
+          Gets the horizontal gap between components. 
+ int getRows() 
+          Gets the number of rows in this layout. 
+ int getVgap() 
+          Gets the vertical gap between components. 
+void setColumns(int cols) 
+          Sets the number of columns in this layout to the specified value. 
+ void setHgap(int hgap) 
+          Sets the horizontal gap between components to the specified value. 
+ void setRows(int rows) 
+          Sets the number of rows in this layout to the specified value. 
+ void setVgap(int vgap) 
+          Sets the vertical gap between components to the specified value. 
+_________________________________________
+
+	

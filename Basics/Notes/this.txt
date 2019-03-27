@@ -1,0 +1,57 @@
+Within an instance method or a constructor, this is a reference to the current object - the object whose method or constructor is being called. You can refer to any member of the current object from within an instance method or a constructor by using this.
+
+Using this with a Field:
+	The most common reason for using the this keyword is because a field is shadowed by a method or constructor parameter.
+
+public class Point
+{
+  private int x=0;
+  private int y=0;
+//constructor
+  public Point(int a,int b)
+  {
+    x=a;
+     y=b;
+  }
+ public static void main(String args[])
+  {
+	Point pt=new Point(100,200);
+  }
+}
+->output:	x-> 100; 	y->200;
+------------------------------------------
+public class Point
+{
+  private int x=0;
+  private int y=0;
+
+  public Point(int x,int b)
+  {
+    x=x; //shadowing
+     y=b;
+  }
+ public static void main(String args[])
+  {
+	Point pt=new Point(100,200);
+  }
+}
+Output:	x-> 0;	y->200;
+---------------------------------------
+public class Point
+{  
+private int x=0; 
+private int y=0;
+  public Point(int x,int y)
+  {
+    this.x=x;
+     this.y=y;
+  }
+ public static void main(String args[])
+  {
+	Point pt=new Point(100,200);
+  }
+}
+-> output:
+	x-> 100;
+	y->200;
+-------------------------------------------------------------------------

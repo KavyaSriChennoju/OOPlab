@@ -1,0 +1,23 @@
+comments:
+	2 main usages
+
+ 1. to make a statement as a non-executable statement
+ 2. to describe the programme/statements/ block of code
+
+	java provides 3 types of comments
+
+1. single line comments , (//)
+	
+	//printf("%d",sno);  	->1
+
+	printf("%d",sno); //printing a number  -> 2
+
+2. multi-line comments
+	/*
+
+	*/
+3.  Documentation comments
+	/**
+
+	*/
+  This comment can only be used with javadoc (basic tool  ->to generate html documentation.

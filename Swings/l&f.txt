@@ -1,0 +1,37 @@
+UIManager.setLookAndFeel(
+   "com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+
+"com.sun.java.swing.plaf.gtk.GTKLookAndFeel" 
+"javax.swing.plaf.metal.MetalLookAndFeel" 
+"com.sun.java.swing.plaf.windows.WindowsLookAndFeel" 
+"com.sun.java.swing.plaf.motif.MotifLookAndFeel" 
+
+-------------------------------------------------------------------------------
+Specifying the Look and Feel: Command Line 
+You can specify the look and feel at the command line by using the -D flag to set the swing.defaultlaf property. For example: 
+java -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel MyApp
+
+java -Dswing.defaultlaf=com.sun.java.swing.plaf.windows.WindowsLookAndFeel MyApp
+________________________
+Specifying the Look and Feel: swing.properties 
+Yet another way to specify the current look and feel is to use the swing.properties file to set the swing.defaultlaf property. This file is located in the lib directory of the Java release. For example, if you're using the Java interpreter in javaHomeDirectory\bin, then the swing.properties file (if it exists) is in javaHomeDirectory\lib. Here is an example of the contents of a swing.properties file: 
+# Swing properties
+
+swing.defaultlaf=com.sun.java.swing.plaf.windows.WindowsLookAndFeel
+________________________________________________
+Changing the Look and Feel After Startup 
+You can change the look and feel with setLookAndFeel even after the program's GUI is visible. To make existing components reflect the new look and feel, invoke the SwingUtilities updateComponentTreeUI method once per top-level container. Then you might wish to resize each top-level container to reflect the new sizes of its contained components. For example: 
+
+UIManager.setLookAndFeel(lnfName);
+SwingUtilities.updateComponentTreeUI(frame);
+frame.pack();
+************************************************************************
+By changing a value in the UIDefaults hash table, you effectively change the properties of the created Swing components. For instance, if you'd like
+all JButton components to have white text with a red background and a 24-point italic Serif font, add the following to the table:
+
+UIManager.put("Button.foreground", Color.white);
+UIManager.put("Button.background", Color.red);
+Font f = new Font("Serif", Font.ITALIC, 24);
+UIManager.put("Button.font", f);
+
+******************************************************

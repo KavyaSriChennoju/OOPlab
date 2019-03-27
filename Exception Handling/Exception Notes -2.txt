@@ -1,0 +1,54 @@
+		Java exceptions
+Java exceptions can be separated into two distinct groups:
+	1. checked
+	2. Unchecked.
+
+ A Checked exception signals an abnormal condition that the client must handle. All Checked Exceptions must either be caught and handled within the calling method or be declared in the throws clause following the method signature. This is why they are called “checked”. The compiler and the JVM will verify that all checked exceptions that can occur in a method are handled.
+
+ The compiler and JVM don’t care if unchecked exceptions are ignored, because these are exceptions that the client usually cannot handle anyway. Unchecked exceptions, such as java.lang.ClassCastException, are typically the result of incorrect logic or programming errors.
+
+The determination of whether an exception is checked or unchecked is based simply on its location in the exception hierarchy. All classes that are descendants of the java.lang.Exception class, except for subclasses of RuntimeException, are checked exceptions; the compiler will ensure that they are either handled by the method or listed in the throws clause. 
+
+RuntimeException and its descendants are unchecked exceptions, and the compiler will not complian about these not being listed in a throw clause for a method or being handled in a try/catch block, this is why they are referred to as “unchecked”.
+		-END-
+System versus Application Exceptions:
+	Exceptions can be further classified into either System exceptions or application exceptions. 
+
+•	System Exceptions are more serious in nature.
+•	These are typically low-level problems that aren’t related to the application logic and from which end users are not expected to recover.
+•	In many cases, system exceptions are unchecked, and your application isn’t supposed to catch them because they are either non-programming errors or are so severe that nothing can be done about them.
+
+Application exceptions are Errors that occur because of the violation of business rule or some other condition in the application logic. 
+
+			***********************
+catch (IOException e) 
+{
+    e.printStackTrace();  //Output goes to System.err.
+    e.printStackTrace(System.out);  //Send trace to stdout.
+}
+
+The finally block always executes when the try block exits. This ensures that the finally block is executed even if an unexpected exception occurs. But finally is useful for more than just exception handling — it allows the programmer to avoid having cleanup code accidentally bypassed by a return, continue, or break. Putting cleanup code in a finally block is always a good practice, even when no exceptions are anticipated. 
+
+Important: The finally block is a key tool for preventing resource leaks. When closing a file or otherwise recovering resources, place the code in a finally block to insure that resource is always recovered. 
+
+finally {
+            if (in != null) {
+                in.close();
+            }
+            if (out != null) {
+                out.close();
+            }
+        }
+
+Definition:  A stack trace provides information on the execution history of the current thread and lists the names of the classes and methods that were called at the point when the exception occurred. A stack trace is a useful debugging tool that you'll normally take advantage of when an exception has been thrown. 
+
+Re-throwing an exception
+		After an exception has been handled in a catch clause, It can be thrown again by using the syntax that is used to throw new exception. This can be very useful if your program has several methods that need to do special handling of errors. For example , if you have a file-merging program that needs to have several files open simultaneously, you might use following syntax to close any open files and then pass the exception to the user interface object.
+
+}catch(FileNotFoundException ex)
+{
+   closeAllFiles();
+     throw ex;
+}
+
+?	If you try to create an array where the length is negative, the run-time NegativeArraySizeException will be thrown.

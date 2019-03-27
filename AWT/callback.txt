@@ -1,0 +1,2 @@
+Interfaces can be used to implement "callbacks" in Java. This is when an object effectively passes a reference to one or more of its methods to another object. The callback occurs when the other object subsequently invokes one of the methods. In C or C++, this is prime territory for function pointers; Java uses interfaces instead. More generally, this concept is extended in Java to the idea of events in which listener objects register with event sources. 
+
